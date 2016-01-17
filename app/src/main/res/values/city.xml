@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="city_prompt">Pilih Propinsi</string>
+    <string-array name="aceh_arrays">
+        <item>Coba</item>
+    </string-array>
+
+</resources>

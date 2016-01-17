@@ -15,6 +15,6 @@ public class KotaDB extends RealmObject {
     // Standard getters & setters
     public String getName() { return name; }
     public void   setName(String name) { this.name = name; }
-    public Integer getPropinsiID() { return propinsi_id; }
-    public void   setPropinsiID(int propinsi_id) { this.propinsi_id = propinsi_id; }
+    public int getPropinsi_id() { return propinsi_id; }
+    public void   setPropinsi_id(int propinsi_id) { this.propinsi_id = propinsi_id; }
 }

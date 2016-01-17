@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="province_prompt">Pilih Propinsi</string>
+
+    <string-array name="province_arrays">
+        <item>Aceh</item>
+        <item>Sumatera Utara</item>
+        <item>Sumatera Barat</item>
+        <item>Jambi</item>
+        <item>Bengkulu</item>
+        <item>Riau</item>
+        <item>Riau Kepulauan</item>
+        <item>Sumatera Selatan</item>
+        <item>Bangka Belitung</item>
+        <item>Lampung</item>
+        <item>Banten</item>
+        <item>Jabodetabek</item>
+        <item>Jawa Barat</item>
+        <item>Jawa Tengah</item>
+        <item>DI Yogyakarta</item>
+        <item>Jawa Timur</item>
+        <item>Bali</item>
+        <item>Nusa Tenggara Barat</item>
+        <item>Nusa Tenggara Timur</item>
+        <item>Kalimantan Barat</item>
+        <item>Kalimantan Tengah</item>
+        <item>Kalimantan Selatan</item>
+        <item>Kalimantan Timur</item>
+        <item>Gorontalo</item>
+        <item>Sulawesi Utara</item>
+        <item>Sulawesi Tengah</item>
+        <item>Sulawesi Tenggara</item>
+        <item>Sulawesi Selatan</item>
+        <item>Sulawesi Barat</item>
+        <item>Maluku</item>
+        <item>Maluku Utara</item>
+        <item>Papua Barat</item>
+        <item>Papua</item>
+    </string-array>
+
+</resources>

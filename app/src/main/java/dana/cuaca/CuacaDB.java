@@ -19,8 +19,8 @@ public class CuacaDB extends RealmObject{
     public void   setName(String name) { this.name = name; }
     public String getTanggal() { return tanggal; }
     public void   setTanggal(String tanggal) { this.tanggal = tanggal; }
-    public Integer getPropinsiID() { return propinsi_id; }
-    public void   setPropinsiID(int propinsi_id) { this.propinsi_id = propinsi_id; }
-    public Integer getKotaiID() { return kota_id; }
-    public void   setKotaID(int kota_id) { this.kota_id = kota_id; }
+    public int getPropinsi_id() { return propinsi_id; }
+    public void   setPropinsi_id(int propinsi_id) { this.propinsi_id = propinsi_id; }
+    public int getKota_id() { return kota_id; }
+    public void   setKota_id(int kota_id) { this.kota_id = kota_id; }
 }
