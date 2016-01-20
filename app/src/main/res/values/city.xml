@@ -1,8 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="city_prompt">Pilih Propinsi</string>
+    <string name="city_prompt">Pilih Kota</string>
     <string-array name="aceh_arrays">
+        <item>Tapaktuan</item>
+        <item>Kutacane</item>
+        <item>Idi Rayeuk</item>
+        <item>Takengon</item>
+        <item>Meulaboh</item>
+        <item>Kota Jantho</item>
+        <item>Sigli</item>
+        <item>Lhoksukon</item>
+        <item>Sinabang</item>
+        <item>Singkil</item>
+        <item>Bireun</item>
+        <item>Blangpidie</item>
+        <item>Blang Kejeren</item>
+        <item>Calang</item>
+        <item>Suka Makmue</item>
+        <item>Karang Baru</item>
+        <item>Simpang Tiga Redeong</item>
+        <item>Meureundu</item>
+        <item>Banda Aceh</item>
+        <item>Sabang</item>
+        <item>Lhokseumawe</item>
+        <item>Langsa</item>
+        <item>Subussalam</item>
+
+    </string-array>
+    <string-array name="sumut_arrays">
+        <item>Pandan</item>
+        <item>Tarutung</item>
+    </string-array>
+    <string-array name="sumbar_arrays">
+        <item>Coba</item>
+    </string-array>
+    <string-array name="jambi_arrays">
+        <item>Coba</item>
+    </string-array>
+    <string-array name="bengkulu_arrays">
+        <item>Coba</item>
+    </string-array>
+    <string-array name="riau_arrays">
+        <item>Coba</item>
+    </string-array>
+    <string-array name="riau_kep_arrays">
+        <item>Coba</item>
+    </string-array>
+    <string-array name="sumsel_arrays">
+        <item>Coba</item>
+    </string-array>
+    <string-array name="bangka_arrays">
+        <item>Coba</item>
+    </string-array>
+    <string-array name="lampung_arrays">
+        <item>Coba</item>
+    </string-array>
+    <string-array name="banten_arrays">
+        <item>Coba</item>
+    </string-array>
+    <string-array name="jabodetabek_arrays">
         <item>Coba</item>
     </string-array>
 
