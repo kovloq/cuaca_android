@@ -40,74 +40,105 @@ public class MainActivity extends AppCompatActivity {
                 Log.d("pilih",kota);
                 switch(kota){
                     case "Aceh" :
-                        Log.d("pilih","aceh");
+                        //Log.d("pilih","aceh");
                         city_val=R.array.aceh_arrays;
                         break;
                     case "Sumatera Utara" :
-                        Log.d("pilih","sumut");
+                        //Log.d("pilih","sumut");
                         city_val=R.array.sumut_arrays;
                         break;
                     case "Sumatera Barat" :
+                        city_val=R.array.sumut_arrays;
                         break;
                     case "Jambi" :
+                        city_val=R.array.jambi_arrays;
                         break;
                     case "Bengkulu" :
+                        city_val=R.array.bengkulu_arrays;
                         break;
                     case "Riau" :
+                        city_val=R.array.riau_arrays;
                         break;
                     case "Riau Kepulauan" :
+                        city_val=R.array.riau_kep_arrays;
                         break;
                     case "Sumatera Selatan" :
+                        city_val=R.array.sumsel_arrays;
                         break;
                     case "Bangka Belitung" :
+                        city_val=R.array.bangka_arrays;
                         break;
                     case "Lampung" :
+                        city_val=R.array.lampung_arrays;
                         break;
                     case "Banten" :
+                        city_val=R.array.banten_arrays;
                         break;
                     case "Jabodetabek" :
+                        city_val=R.array.jabodetabek_arrays;
                         break;
                     case "Jawa Barat" :
+                        city_val=R.array.jabar;
                         break;
                     case "Jawa Tengah" :
+                        city_val=R.array.jateng;
                         break;
                     case "DI Yogyakarta" :
+                        city_val=R.array.jogja;
                         break;
                     case "Jawa Timur" :
+                        city_val=R.array.jatim;
                         break;
                     case "Bali" :
+                        city_val=R.array.bali;
                         break;
                     case "Nusa Tenggara Barat" :
+                        city_val=R.array.ntb;
                         break;
                     case "Nusa Tenggara Timur" :
+                        city_val=R.array.ntt;
                         break;
                     case "Kalimantan Barat" :
+                        city_val=R.array.kalbar;
                         break;
                     case "Kalimantan Tengah" :
+                        city_val=R.array.kalteng;
                         break;
                     case "Kalimantan Selatan" :
+                        city_val=R.array.kalsel;
                         break;
                     case "Kalimantan Timur" :
+                        city_val=R.array.kaltim;
                         break;
                     case "Gorontalo" :
+                        city_val=R.array.gorontalo;
                         break;
                     case "Sulawesi Utara" :
+                        city_val=R.array.sulut;
                         break;
                     case "Sulawesi Tengah" :
+                        city_val=R.array.sulteng;
                         break;
                     case "Sulawesi Tenggara" :
+                        city_val=R.array.sultenggara;
                         break;
                     case "Sulawesi Selatan" :
+                        city_val=R.array.sulsel;
                         break;
                     case "Sulawesi Barat" :
+                        city_val=R.array.sulbar;
                         break;
                     case "Maluku" :
+                        city_val=R.array.maluku;
                         break;
                     case "Maluku Utara" :
+                        city_val=R.array.malukuutara;
                         break;
                     case "Papua Barat" :
+                        city_val=R.array.papuabarat;
                         break;
                     case "Papua" :
+                        city_val=R.array.papua;
                         break;
                 }
                 ganti(city_val);

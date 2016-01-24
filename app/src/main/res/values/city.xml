@@ -26,41 +26,544 @@
         <item>Lhokseumawe</item>
         <item>Langsa</item>
         <item>Subussalam</item>
-
     </string-array>
     <string-array name="sumut_arrays">
         <item>Pandan</item>
         <item>Tarutung</item>
+        <item>Sipirok</item>
+        <item>Gunung Sitoli</item>
+        <item>Stabat</item>
+        <item>Kabanjahe</item>
+        <item>Lubuk Pakam</item>
+        <item>Pematang Raya</item>
+        <item>Kisaran</item>
+        <item>Rantau Prapat</item>
+        <item>Sidikalang</item>
+        <item>Balige</item>
+        <item>Panyabungan</item>
+        <item>Teluk Dalam</item>
+        <item>Salak</item>
+        <item>Dolok Sanggul</item>
+        <item>Pangururan</item>
+        <item>Sei Rampah</item>
+        <item>Lima Puluh</item>
+        <item>Medan</item>
+        <item>Pematang Siantar</item>
+        <item>Sibolga</item>
+        <item>Tanjung Balai</item>
+        <item>Binjai Kota</item>
+        <item>Tebing Tinggi</item>
+        <item>Padang Sidempuan</item>
+        <item>Kota Pinang</item>
+        <item>Aek Kanopan</item>
+        <item>Lahomi</item>
+        <item>Lotu</item>
+        <item>Sibuhuan</item>
+        <item>Gunung Tua</item>
+        <item>Gunung Sitoli</item>
     </string-array>
     <string-array name="sumbar_arrays">
-        <item>Coba</item>
+        <item>Painan</item>
+        <item>Arosuka</item>
+        <item>Muaro Sijunjung</item>
+        <item>Batusangkar</item>
+        <item>Parit Malintang</item>
+        <item>Lubuk Basung</item>
+        <item>Sarilamak</item>
+        <item>Lubuk Sikaping</item>
+        <item>Tuapejat</item>
+        <item>Pulau Punjung</item>
+        <item>Padang Aro</item>
+        <item>Simpang Empat</item>
+        <item>Padang</item>
+        <item>Solok</item>
+        <item>Sawahlunto</item>
+        <item>Padangpanjang</item>
+        <item>Bukittinggi</item>
+        <item>Payakumbuh</item>
+        <item>Pariaman</item>
     </string-array>
     <string-array name="jambi_arrays">
-        <item>Coba</item>
+        <item>Kerinci</item>
+        <item>Bangko</item>
+        <item>Sarolangun</item>
+        <item>Bulian</item>
+        <item>Sengeti</item>
+        <item>Kuala Tungkal</item>
+        <item>Sabak</item>
+        <item>Bungo</item>
+        <item>Tebo</item>
+        <item>Jambi</item>
+        <item>Sungai Penuh</item>
     </string-array>
     <string-array name="bengkulu_arrays">
-        <item>Coba</item>
+        <item>Manna</item>
+        <item>Curup</item>
+        <item>Arga Makmur</item>
+        <item>Bintuhan</item>
+        <item>Tais</item>
+        <item>Mukomuko</item>
+        <item>Tubei</item>
+        <item>Kepahiang</item>
+        <item>Bengkulu</item>
+        <item>Karang Tinggi</item>
     </string-array>
     <string-array name="riau_arrays">
-        <item>Coba</item>
+        <item>Bangkinang</item>
+        <item>Rengat</item>
+        <item>Bengkalis</item>
+        <item>Tembilahan</item>
+        <item>Pangkalan Kerinci</item>
+        <item>Pasir Pengarairan</item>
+        <item>Bagan Siapiapi</item>
+        <item>Siak Sri Indrapura</item>
+        <item>Teluk Kuantan</item>
+        <item>Pekanbaru</item>
+        <item>Dumai</item>
+        <item>Selat Panjang</item>
     </string-array>
     <string-array name="riau_kep_arrays">
-        <item>Coba</item>
+        <item>Batam</item>
+        <item>Tanjung Pinang</item>
+        <item>Bintan</item>
+        <item>Daik Lingga</item>
+        <item>Ranai</item>
+        <item>Tarempa</item>
+        <item>Tanjung Balai Karimun</item>
     </string-array>
     <string-array name="sumsel_arrays">
-        <item>Coba</item>
+        <item>Baturaja</item>
+        <item>Kayu Agung</item>
+        <item>Muara Enim</item>
+        <item>Lahat</item>
+        <item>Musirawas</item>
+        <item>Sekayu</item>
+        <item>Pangkalan Balai</item>
+        <item>Martapura</item>
+        <item>Muaradua</item>
+        <item>Indralaya</item>
+        <item>Tebing Tinggi</item>
+        <item>Palembang</item>
+        <item>Pagar Alam</item>
+        <item>Lubuk Linggau</item>
+        <item>Prabumulih</item>
     </string-array>
     <string-array name="bangka_arrays">
-        <item>Coba</item>
+        <item>Mentok</item>
+        <item>Sungai Liat</item>
+        <item>Pangkal Pinang</item>
+        <item>Koba</item>
+        <item>Toboali</item>
+        <item>Tanjung Pandan</item>
+        <item>Manggar</item>
     </string-array>
     <string-array name="lampung_arrays">
-        <item>Coba</item>
+        <item>Kalianda</item>
+        <item>Gunung Sugih</item>
+        <item>Kotabumi</item>
+        <item>Liwa</item>
+        <item>Menggala</item>
+        <item>Kota Agung</item>
+        <item>Sukadana</item>
+        <item>Blambangan Umpu</item>
+        <item>Bandar Lampung</item>
+        <item>Metro</item>
+        <item>Gedong Tataan</item>
+        <item>Pringsewu</item>
     </string-array>
     <string-array name="banten_arrays">
-        <item>Coba</item>
+        <item>Pandeglang</item>
+        <item>Rangkas Bitung</item>
+        <item>Tigaraksa</item>
+        <item>Serang</item>
+        <item>Tangerang</item>
+        <item>Cilegon</item>
+        <item>Ciruas</item>
+        <item>Lebak</item>
+        <item>Malimping</item>
+        <item>Gunung Kencana</item>
+        <item>Labuhan</item>
+        <item>Ujung Kulon</item>
+        <item>Carita</item>
+        <item>Anyer</item>
+        <item>Bojonegara</item>
+        <item>Merak</item>
     </string-array>
     <string-array name="jabodetabek_arrays">
-        <item>Coba</item>
+        <item>Kepulauan Seribu</item>
+        <item>Jakarta Utara</item>
+        <item>Jakarta Pusat</item>
+        <item>Jakarta Selatan</item>
+        <item>Jakarta Timur</item>
+        <item>Jakarta Barat</item>
+        <item>Depok</item>
+        <item>Tangerang</item>
+        <item>Bekasi</item>
+        <item>Bogor</item>
     </string-array>
-
+    <string-array name="jabar">
+        <item>Cibinong</item>
+        <item>Pelabuhan Ratu</item>
+        <item>Cianjur</item>
+        <item>Soreang</item>
+        <item>Garut</item>
+        <item>Singaparna</item>
+        <item>Ciamis</item>
+        <item>Kuningan</item>
+        <item>Sumber</item>
+        <item>Majalengka</item>
+        <item>Sumedang</item>
+        <item>Indramayu</item>
+        <item>Subang</item>
+        <item>Purwakarta</item>
+        <item>Karawang</item>
+        <item>Cikarang</item>
+        <item>Ngamprah</item>
+        <item>Bogor</item>
+        <item>Cisaat</item>
+        <item>Bandung</item>
+        <item>Cirebon</item>
+        <item>Bekasi</item>
+        <item>Depok</item>
+        <item>Cimahi</item>
+        <item>Tasikmalaya</item>
+        <item>Banjar</item>
+    </string-array>
+    <string-array name="jateng">
+        <item>Cilacap</item>
+        <item>Purwokerto</item>
+        <item>Purbalingga</item>
+        <item>Banjarnegara</item>
+        <item>Kebumen</item>
+        <item>Purworejo</item>
+        <item>Wonosobo</item>
+        <item>Mungkid</item>
+        <item>Boyolali</item>
+        <item>Klaten</item>
+        <item>Sukoharjo</item>
+        <item>Wonogiri</item>
+        <item>Karanganyar</item>
+        <item>Sragen</item>
+        <item>Purwodadi</item>
+        <item>Blora</item>
+        <item>Rembang</item>
+        <item>Pati</item>
+        <item>Kudus</item>
+        <item>Jepara</item>
+        <item>Demak</item>
+        <item>Ungaran</item>
+        <item>Temanggung</item>
+        <item>Kendal</item>
+        <item>Batang</item>
+        <item>Kajen</item>
+        <item>Pemalang</item>
+        <item>Slawi</item>
+        <item>Brebes</item>
+        <item>Magelang</item>
+        <item>Surakarta</item>
+        <item>Salatiga</item>
+        <item>Semarang</item>
+        <item>Pekalongan</item>
+        <item>Tegal</item>
+    </string-array>
+    <string-array name="jogja">
+        <item>Wates</item>
+        <item>Bantul</item>
+        <item>Wonosari</item>
+        <item>Sleman</item>
+        <item>Yogyakarta</item>
+    </string-array>
+    <string-array name="jatim">
+        <item>Pacitan</item>
+        <item>Ponorogo</item>
+        <item>Trenggalek</item>
+        <item>Tulungagung</item>
+        <item>Blitar</item>
+        <item>Kediri</item>
+        <item>Kepanjen</item>
+        <item>Lumajang</item>
+        <item>Jember</item>
+        <item>Banyuwangi</item>
+        <item>Bondowoso</item>
+        <item>Situbondo</item>
+        <item>Probolinggo</item>
+        <item>Pasuruan</item>
+        <item>Sidoarjo</item>
+        <item>Mojokerto</item>
+        <item>Jombang</item>
+        <item>Nganjuk</item>
+        <item>Madiun</item>
+        <item>Magetan</item>
+        <item>Ngawi</item>
+        <item>Bojonegoro</item>
+        <item>Tuban</item>
+        <item>Lamongan</item>
+        <item>Gresik</item>
+        <item>Bangkalan</item>
+        <item>Sampang</item>
+        <item>Pamekasan</item>
+        <item>Sumenep</item>
+        <item>Kediri</item>
+        <item>Blitar</item>
+        <item>Malang</item>
+        <item>Probolinggo</item>
+        <item>Pasuruan</item>
+        <item>Mojokerto</item>
+        <item>Madiun</item>
+        <item>Surabaya</item>
+        <item>Batu</item>
+    </string-array>
+    <string-array name="bali">
+        <item>Negara</item>
+        <item>Tabanan</item>
+        <item>Mangupura</item>
+        <item>Gianyar</item>
+        <item>Semarapura</item>
+        <item>Bangli</item>
+        <item>Amplapura</item>
+        <item>Singaraja</item>
+        <item>Denpasar</item>
+    </string-array>
+    <string-array name="ntb">
+        <item>Mataram</item>
+        <item>Gerung</item>
+        <item>Tanjung</item>
+        <item>Praya</item>
+        <item>Selong</item>
+        <item>Taliwang</item>
+        <item>Sumbawa Besar</item>
+        <item>Dompu</item>
+        <item>Bima</item>
+        <item>Raba</item>
+    </string-array>
+    <string-array name="ntt">
+        <item>Kupang</item>
+        <item>Soe</item>
+        <item>Kefamenanu</item>
+        <item>Atambua</item>
+        <item>Kalabahi</item>
+        <item>Larantuka</item>
+        <item>Maumere</item>
+        <item>Ende</item>
+        <item>Bajawa</item>
+        <item>Ruteng</item>
+        <item>Waingapu</item>
+        <item>Waikabubak</item>
+        <item>Lewoleba</item>
+        <item>Labuan Bajo</item>
+        <item>Mbay</item>
+        <item>Waibakul</item>
+        <item>Weetabula</item>
+        <item>Borong</item>
+        <item>Kupang</item>
+        <item>Seba</item>
+    </string-array>
+    <string-array name="kalbar">
+        <item>Sambas</item>
+        <item>Mempawah</item>
+        <item>Sanggau</item>
+        <item>Ketapang</item>
+        <item>Sintang</item>
+        <item>Putussibau</item>
+        <item>Bengkayang</item>
+        <item>Landak</item>
+        <item>Sekadau</item>
+        <item>Sukadana</item>
+        <item>Nanga Pinoh</item>
+        <item>Sungai Raya</item>
+        <item>Pontianak</item>
+        <item>Singkawang</item>
+    </string-array>
+    <string-array name="kalteng">
+        <item>Pangkalan Bun</item>
+        <item>Sampit</item>
+        <item>Kuala Kapuas</item>
+        <item>Buntok</item>
+        <item>Muarateweh</item>
+        <item>Kasongan</item>
+        <item>Kuala Pembuang</item>
+        <item>Sukamara</item>
+        <item>Nanga Bulik</item>
+        <item>Kuala Kurun</item>
+        <item>Pulangpisau</item>
+        <item>Puruk Cahu</item>
+        <item>Tamiang Layang</item>
+        <item>Palangkaraya</item>
+    </string-array>
+    <string-array name="kalsel">
+        <item>Pelaihari</item>
+        <item>Kotabaru</item>
+        <item>Martapura</item>
+        <item>Marabahan</item>
+        <item>Rantau</item>
+        <item>Kandangan</item>
+        <item>Berabai</item>
+        <item>Amuntai</item>
+        <item>Tanjung</item>
+        <item>Batulicin</item>
+        <item>Paringin</item>
+        <item>Banjarmasin</item>
+        <item>Banjarbaru</item>
+    </string-array>
+    <string-array name="kaltim">
+        <item>Tanah Grogot</item>
+        <item>Tenggarong</item>
+        <item>Tanjung Redeb</item>
+        <item>Tanjung Selor</item>
+        <item>Nunukan</item>
+        <item>Malinau</item>
+        <item>Sendawar</item>
+        <item>Sengata</item>
+        <item>Penajam</item>
+        <item>Tidung Pala</item>
+        <item>Balikpapan</item>
+        <item>Samarinda</item>
+        <item>Tarakan</item>
+        <item>Bontang</item>
+    </string-array>
+    <string-array name="gorontalo">
+        <item>Limboto</item>
+        <item>Tilamuta</item>
+        <item>Suwawa</item>
+        <item>Marisa</item>
+        <item>Kwandang</item>
+        <item>Gorontalo</item>
+    </string-array>
+    <string-array name="sulut">
+        <item>Lolak</item>
+        <item>Tondano</item>
+        <item>Tahuna</item>
+        <item>Melongguane</item>
+        <item>Amurang</item>
+        <item>Air Madidi</item>
+        <item>Ratahan</item>
+        <item>Boroko</item>
+        <item>Ondong Siau</item>
+        <item>Manado</item>
+        <item>Bitung</item>
+        <item>Tomohon</item>
+        <item>Kotamobagu</item>
+        <item>Molibagu</item>
+        <item>Tutuyan</item>
+    </string-array>
+    <string-array name="sulteng">
+        <item>Luwuk</item>
+        <item>Poso</item>
+        <item>Donggala</item>
+        <item>Toli Toli</item>
+        <item>Buol</item>
+        <item>Bungku</item>
+        <item>Salakan</item>
+        <item>Parigi</item>
+        <item>Ampana</item>
+        <item>Palu</item>
+    </string-array>
+    <string-array name="sultenggara">
+        <item>Kolaka</item>
+        <item>Unaaha</item>
+        <item>Raha</item>
+        <item>Pasar Wajo</item>
+        <item>Andoolo</item>
+        <item>Rumbia</item>
+        <item>Wangi Wangi</item>
+        <item>Lasusua</item>
+        <item>Wanggudu</item>
+        <item>Buranga</item>
+        <item>Kendari</item>
+        <item>Bau Bau</item>
+    </string-array>
+    <string-array name="sulsel">
+        <item>Benteng</item>
+        <item>Bulukumba</item>
+        <item>Bantaeng</item>
+        <item>Jeneponto</item>
+        <item>Takalar</item>
+        <item>Sungguminasa</item>
+        <item>Sinjai</item>
+        <item>Watampone</item>
+        <item>Maros</item>
+        <item>Pangkajane</item>
+        <item>Barru</item>
+        <item>Watan Soppeng</item>
+        <item>Sengkang</item>
+        <item>Sidenreng</item>
+        <item>Pinrang</item>
+        <item>Enrekang</item>
+        <item>Rantepao</item>
+        <item>Makale</item>
+        <item>Masamba</item>
+        <item>Malili</item>
+        <item>Makassar</item>
+        <item>Pare Pare</item>
+        <item>Palopo</item>
+        <item>Belopa</item>
+    </string-array>
+    <string-array name="sulbar">
+        <item>Pasangkayu</item>
+        <item>Mamuju</item>
+        <item>Mamasa</item>
+        <item>Polewali</item>
+        <item>Majene</item>
+        <item>Topoyo</item>
+    </string-array>
+    <string-array name="maluku">
+        <item>Masohi</item>
+        <item>Tual</item>
+        <item>Saumlaki</item>
+        <item>Namlea</item>
+        <item>Bula</item>
+        <item>Piru</item>
+        <item>Dobo</item>
+        <item>Ambon</item>
+        <item>Tual</item>
+        <item>Kisar</item>
+        <item>Leksula</item>
+    </string-array>
+    <string-array name="malukuutara">
+        <item>Jailolo</item>
+        <item>Weda</item>
+        <item>Tobelo</item>
+        <item>Labuha</item>
+        <item>Sanana</item>
+        <item>Maba</item>
+        <item>Ternate</item>
+        <item>Tidore</item>
+    </string-array>
+    <string-array name="papuabarat">
+        <item>Aimas</item>
+        <item>Manokwari</item>
+        <item>Fak Fak</item>
+        <item>Teminabuan</item>
+        <item>Waisai</item>
+        <item>Bintuni</item>
+        <item>Wasior</item>
+        <item>Kaimana</item>
+        <item>Sorong Kota</item>
+        <item>Kumurkek</item>
+        <item>Fef</item>
+        <item>Ransiki</item>
+    </string-array>
+    <string-array name="papua">
+        <item>Merauke</item>
+        <item>Wamena</item>
+        <item>Sentani</item>
+        <item>Nabire</item>
+        <item>Serui</item>
+        <item>Biak</item>
+        <item>Mulia</item>
+        <item>Enarotali</item>
+        <item>Timika</item>
+        <item>Sarmi</item>
+        <item>Waris</item>
+        <item>Oksibil</item>
+        <item>Sumohai</item>
+        <item>Karubaga</item>
+        <item>Botawa</item>
+        <item>Tanah Merah</item>
+        <item>Kepi</item>
+        <item>Agats</item>
+        <item>Sorendiweri</item>
+        <item>Burmeso</item>
+        <item>Jayapura</item>
+    </string-array>
 </resources>
