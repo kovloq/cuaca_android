@@ -31,4 +31,6 @@ dependencies {
     compile 'org.jetbrains.kotlin:kotlin-stdlib:1.0.0-beta-1103'
     // Add Reactive Functional Programming
     compile 'io.reactivex:rxandroid:0.24.0'
+    //Add Gson
+    compile 'com.squareup.retrofit:converter-gson:2.0.0-beta2'
 }

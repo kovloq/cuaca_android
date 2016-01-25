@@ -1,5 +1,6 @@
 package dana.cuaca;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -31,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         city = (Spinner)findViewById(R.id.city);
+        btnSubmit=(Button)findViewById(R.id.okbutton);
         province = (Spinner)findViewById(R.id.province);
         province.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -151,10 +153,19 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+        btnSubmit.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                String prop = province.getSelectedItem().toString();
+                String kot = city.getSelectedItem().toString();
+                Intent intent = new Intent(MainActivity.this, CuacaActivity.class);
+                intent.putExtra("propinsi", prop);
+                intent.putExtra("kota", kot);
+                startActivity(intent);
+            }
+        });
 
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.aceh_arrays, android.R.layout.simple_spinner_item);
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        city.setAdapter(adapter);
     }
 
     void ganti(int arr){
@@ -162,9 +173,4 @@ public class MainActivity extends AppCompatActivity {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         city.setAdapter(adapter);
     }
-//    void sumut(){
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.sumut_arrays, android.R.layout.simple_spinner_item);
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        city.setAdapter(adapter);
-//    }
 }
