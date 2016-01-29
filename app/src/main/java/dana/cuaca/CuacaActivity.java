@@ -67,20 +67,22 @@ public class CuacaActivity  extends AppCompatActivity {
                 cuacaView.setText(cuaca_res);
                 tanggalView.setText(tanggal_res);
                 namaView.setText(name_res);
-                switch(image_res){
-                    case "cerah_berawan.png" :
-                        imageView.setImageResource(R.drawable.cerah_berawan);
-                        break;
-                    case "hujan_lebat.png" :
-                        imageView.setImageResource(R.drawable.hujan_lebat);
-                        break;
-                    case "hujan_ringan.png" :
-                        imageView.setImageResource(R.drawable.hujan_ringan);
-                        break;
-                    case "hujan_sedang.png" :
-                        imageView.setImageResource(R.drawable.hujan_sedang);
-                        break;
-                }
+                int resId = getResources().getIdentifier(image_res, "drawable", getPackageName());
+                imageView.setImageResource(resId);
+//                switch(image_res){
+//                    case "cerah_berawan.png" :
+//                        imageView.setImageResource(R.drawable.cerah_berawan);
+//                        break;
+//                    case "hujan_lebat.png" :
+//                        imageView.setImageResource(R.drawable.hujan_lebat);
+//                        break;
+//                    case "hujan_ringan.png" :
+//                        imageView.setImageResource(R.drawable.hujan_ringan);
+//                        break;
+//                    case "hujan_sedang.png" :
+//                        imageView.setImageResource(R.drawable.hujan_sedang);
+//                        break;
+//                }
                 Log.d("Name", name_res);
                 Log.d("Tanggal", tanggal_res);
                 Log.d("Cuaca", cuaca_res);

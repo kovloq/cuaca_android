@@ -18,7 +18,7 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:background="@color/white"
-        android:textColor="@color/white"
+
         android:entries="@array/province_arrays"
         android:prompt="@string/province_prompt"
         android:layout_marginBottom="20dp"
@@ -31,7 +31,6 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         android:background="@color/white"
-        android:textColor="@color/white"
         android:prompt="@string/city_prompt"
          />
 
@@ -41,6 +40,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="OK"
+        android:textColor="#000000"
         android:background="@color/white"
         android:id="@+id/okbutton"
          />
