@@ -33,18 +33,18 @@ public class SplashScreenActivity extends AppCompatActivity {
 
         final SettingDB setting = new SettingDB();
         RealmConfiguration config = new RealmConfiguration.Builder(this).build();
+        Realm.setDefaultConfiguration(config);
         try {
-            realm = Realm.getInstance(SplashScreenActivity.this);
+            realm = Realm.getDefaultInstance();
         } catch (RealmMigrationNeededException r) {
             Realm.deleteRealm(config);
-            realm = Realm.getInstance(SplashScreenActivity.this);
+            realm = Realm.getDefaultInstance();
         }
+
         // Build the query looking at all users:
-        RealmQuery<SettingDB> query = realm.where(SettingDB.class);
-        //Select Where ID =1 ;
-        query.equalTo("id", 1);
+        final RealmResults<SettingDB> result = realm.where(SettingDB.class).equalTo("id", 1).findAll();
         // Execute the query:
-        final RealmResults<SettingDB> result = query.findAll();
+
         Log.d("Size", Integer.toString(result.size()));
 
         //Check if setting=0
@@ -55,20 +55,24 @@ public class SplashScreenActivity extends AppCompatActivity {
                 // Do something after 5s = 5000ms
                 if (result.size() == 0) {
                     //Insert to database
-
                     realm.beginTransaction();
-                    setting.setId(1);
-                    setting.setKota("");
-                    setting.setPropinsi("");
+                    SettingDB set = realm.createObject(SettingDB.class);
+                    set.setId(1);
+                    //Set Default to Aceh
+                    set.setKota("Tapaktuan");
+                    set.setPropinsi("Aceh");
                     realm.commitTransaction();
 
                     //Go to main activity
                     Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
                     startActivity(intent);
                 } else {
+                    SettingDB results1 = realm.where(SettingDB.class).equalTo("id", 1).findFirst();
+
+//                    Log.d("hasil",Integer.toString(results1.getId()));
                     Intent intent = new Intent(SplashScreenActivity.this, CuacaActivity.class);
-                    intent.putExtra("propinsi", "Aceh");
-                    intent.putExtra("kota", "Tapaktuan");
+                    intent.putExtra("propinsi",results1.getPropinsi());
+                    intent.putExtra("kota", results1.getKota());
                     startActivity(intent);
                 }
             }

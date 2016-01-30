@@ -1,10 +1,16 @@
 package dana.cuaca;
 
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -101,6 +107,44 @@ public class CuacaActivity  extends AppCompatActivity {
 
     public static int getImageId(Context context, String imageName) {
         return context.getResources().getIdentifier("drawable/" + imageName, null, context.getPackageName());
+    }
+
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.about:
+                //startActivity(new Intent(this, About.class));
+
+                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getApplicationContext());
+// set dialog message
+                alertDialogBuilder
+                        .setMessage("Click yes to exit!")
+                        .setCancelable(false)
+                        .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,int id) {
+                                // if this button is clicked, close
+                                // current activity
+                                CuacaActivity.this.finish();
+                            }
+                        });
+                // set title
+                alertDialogBuilder.setTitle("Your Title");
+                // create alert dialog
+                AlertDialog alertDialog = alertDialogBuilder.create();
+                // show it
+                alertDialog.show();
+                return true;
+            case R.id.setting:
+                startActivity(new Intent(this, MainActivity.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 
 }

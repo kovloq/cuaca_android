@@ -37,6 +37,17 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         city = (Spinner)findViewById(R.id.city);
+        city.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
         btnSubmit=(Button)findViewById(R.id.okbutton);
         province = (Spinner)findViewById(R.id.province);
         province.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -170,16 +181,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        final SettingDB setting = realm.where(SettingDB.class).equalTo("id", 1).findFirst();
+
 
                 btnSubmit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         //Set Setting ID to 1
                         String prop = province.getSelectedItem().toString();
+                        Log.d("Prop","kampret" + prop);
                         String kot = city.getSelectedItem().toString();
+                        Log.d("Kot","kampret" + kot);
                         Intent intent = new Intent(MainActivity.this, CuacaActivity.class);
+                        realm = Realm.getDefaultInstance();
+                        SettingDB setting = realm.where(SettingDB.class).equalTo("id", 1).findFirst();
                         realm.beginTransaction();
+//                        Log.d("coba",setting.getKota());
                         setting.setKota(kot);
                         setting.setPropinsi(prop);
                         realm.commitTransaction();
