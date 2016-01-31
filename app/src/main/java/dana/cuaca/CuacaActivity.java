@@ -73,26 +73,14 @@ public class CuacaActivity  extends AppCompatActivity {
                 cuacaView.setText(cuaca_res);
                 tanggalView.setText(tanggal_res);
                 namaView.setText(name_res);
-                int resId = getResources().getIdentifier(image_res, "drawable", getPackageName());
-                imageView.setImageResource(resId);
-//                switch(image_res){
-//                    case "cerah_berawan.png" :
-//                        imageView.setImageResource(R.drawable.cerah_berawan);
-//                        break;
-//                    case "hujan_lebat.png" :
-//                        imageView.setImageResource(R.drawable.hujan_lebat);
-//                        break;
-//                    case "hujan_ringan.png" :
-//                        imageView.setImageResource(R.drawable.hujan_ringan);
-//                        break;
-//                    case "hujan_sedang.png" :
-//                        imageView.setImageResource(R.drawable.hujan_sedang);
-//                        break;
-//                }
                 Log.d("Name", name_res);
                 Log.d("Tanggal", tanggal_res);
                 Log.d("Cuaca", cuaca_res);
                 Log.d("Image", image_res);
+                int resId = getResources().getIdentifier(image_res, "drawable", getPackageName());
+                imageView.setImageResource(resId);
+//
+
             }
 
             @Override
@@ -118,27 +106,9 @@ public class CuacaActivity  extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.about:
-                //startActivity(new Intent(this, About.class));
-
-                AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(getApplicationContext());
-// set dialog message
-                alertDialogBuilder
-                        .setMessage("Click yes to exit!")
-                        .setCancelable(false)
-                        .setPositiveButton("Yes",new DialogInterface.OnClickListener() {
-                            public void onClick(DialogInterface dialog,int id) {
-                                // if this button is clicked, close
-                                // current activity
-                                CuacaActivity.this.finish();
-                            }
-                        });
-                // set title
-                alertDialogBuilder.setTitle("Your Title");
-                // create alert dialog
-                AlertDialog alertDialog = alertDialogBuilder.create();
-                // show it
-                alertDialog.show();
+                startActivity(new Intent(this, AboutActivity.class));
                 return true;
+
             case R.id.setting:
                 startActivity(new Intent(this, MainActivity.class));
                 return true;

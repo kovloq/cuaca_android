@@ -37,7 +37,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         try {
             realm = Realm.getDefaultInstance();
         } catch (RealmMigrationNeededException r) {
-            Realm.deleteRealm(config);
+            //Realm.deleteRealm(config);
             realm = Realm.getDefaultInstance();
         }
 
