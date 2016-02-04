@@ -1,5 +1,6 @@
 package dana.cuaca;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,7 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import io.realm.Realm;
+import io.realm.RealmResults;
 
 /*
 import java.util.List;
@@ -32,31 +34,103 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSubmit;
     Realm realm = null;
     int city_val;
+//    private ProgressDialog progress;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         city = (Spinner)findViewById(R.id.city);
-        city.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                ((TextView) parent.getChildAt(0)).setTextColor(Color.BLACK);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-        btnSubmit=(Button)findViewById(R.id.okbutton);
         province = (Spinner)findViewById(R.id.province);
+        //Load Setting from DB
+        realm = Realm.getDefaultInstance();
+        RealmResults<SettingDB> result = realm.where(SettingDB.class).equalTo("id", 1).findAll();
+//
+        final SettingDB results1 = realm.where(SettingDB.class).equalTo("id", 1).findFirst();
+        if (result.size() !=0){
+
+
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.province_arrays, android.R.layout.simple_spinner_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            for(int i = 0; i < adapter.getCount(); i++) {
+                if(adapter.getItem(i).equals(results1.getPropinsi())) {
+                    province.setSelection(i);
+                    city_val = city_select(results1.getPropinsi());
+                    ganti(city_val,results1);
+                    break;
+                }
+            }
+//
+
+        }
+        //end
+
+        btnSubmit=(Button)findViewById(R.id.okbutton);
+
         province.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
                 // your code here
-                ((TextView) parentView.getChildAt(0)).setTextColor(Color.BLACK);
+                //((TextView) parentView.getChildAt(0)).setTextColor(Color.BLACK);
                 String kota = province.getSelectedItem().toString();
                 Log.d("pilih", kota);
+                city_val = city_select(kota);
+                ganti(city_val,results1);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parentView) {
+                // your code here
+                Log.d("Not selected province", "not selected");
+            }
+
+        });
+
+
+                btnSubmit.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+//                        progress=new ProgressDialog(MainActivity.this);
+//                        progress.setMessage("Loading");
+//                        progress.show();
+                        //Set Setting ID to 1
+                        String prop = province.getSelectedItem().toString();
+                        Log.d("Prop", "kampret" + prop);
+                        String kot = city.getSelectedItem().toString();
+                        Log.d("Kot", "kampret" + kot);
+                        Intent intent = new Intent(MainActivity.this, CuacaActivity.class);
+                        realm = Realm.getDefaultInstance();
+                        SettingDB setting = realm.where(SettingDB.class).equalTo("id", 1).findFirst();
+                        realm.beginTransaction();
+//                        Log.d("coba",setting.getKota());
+                        setting.setKota(kot);
+                        setting.setPropinsi(prop);
+                        realm.commitTransaction();
+                        intent.putExtra("propinsi", prop);
+                        intent.putExtra("kota", kot);
+                        finish();
+                        startActivity(intent);
+                    }
+                });
+
+            }
+
+            void ganti(int arr,SettingDB results1) {
+                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, arr, android.R.layout.simple_spinner_item);
+                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+                city.setAdapter(adapter);
+                for(int i = 0; i < adapter.getCount(); i++) {
+                    if(adapter.getItem(i).equals(results1.getKota())) {
+                        Log.d("pilihan kota",adapter.getItem(i).toString());
+                        city.setSelection(i);
+                        break;
+                    }
+                }
+
+            }
+
+
+
+            Integer city_select(String kota){
                 switch (kota) {
                     case "Aceh":
                         //Log.d("pilih","aceh");
@@ -160,56 +234,6 @@ public class MainActivity extends AppCompatActivity {
                         city_val = R.array.papua;
                         break;
                 }
-                ganti(city_val);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parentView) {
-                // your code here
-            }
-
-        });
-        province.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
-                ((TextView) parentView.getChildAt(0)).setTextColor(Color.BLACK);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
-
-
-                btnSubmit.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        //Set Setting ID to 1
-                        String prop = province.getSelectedItem().toString();
-                        Log.d("Prop","kampret" + prop);
-                        String kot = city.getSelectedItem().toString();
-                        Log.d("Kot","kampret" + kot);
-                        Intent intent = new Intent(MainActivity.this, CuacaActivity.class);
-                        realm = Realm.getDefaultInstance();
-                        SettingDB setting = realm.where(SettingDB.class).equalTo("id", 1).findFirst();
-                        realm.beginTransaction();
-//                        Log.d("coba",setting.getKota());
-                        setting.setKota(kot);
-                        setting.setPropinsi(prop);
-                        realm.commitTransaction();
-                        intent.putExtra("propinsi", prop);
-                        intent.putExtra("kota", kot);
-                        startActivity(intent);
-                    }
-                });
-
-            }
-
-            void ganti(int arr) {
-                ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, arr, android.R.layout.simple_spinner_item);
-                adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-                city.setAdapter(adapter);
+                return city_val;
             }
         }

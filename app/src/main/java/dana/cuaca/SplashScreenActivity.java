@@ -37,7 +37,7 @@ public class SplashScreenActivity extends AppCompatActivity {
         try {
             realm = Realm.getDefaultInstance();
         } catch (RealmMigrationNeededException r) {
-            //Realm.deleteRealm(config);
+            Realm.deleteRealm(config);
             realm = Realm.getDefaultInstance();
         }
 
@@ -62,7 +62,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                     set.setKota("Tapaktuan");
                     set.setPropinsi("Aceh");
                     realm.commitTransaction();
-
+                    finish();
                     //Go to main activity
                     Intent intent = new Intent(SplashScreenActivity.this, MainActivity.class);
                     startActivity(intent);
@@ -73,6 +73,7 @@ public class SplashScreenActivity extends AppCompatActivity {
                     Intent intent = new Intent(SplashScreenActivity.this, CuacaActivity.class);
                     intent.putExtra("propinsi",results1.getPropinsi());
                     intent.putExtra("kota", results1.getKota());
+                    finish();
                     startActivity(intent);
                 }
             }

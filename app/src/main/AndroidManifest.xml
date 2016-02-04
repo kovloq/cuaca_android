@@ -10,6 +10,7 @@
         android:theme="@style/AppTheme" >
         <activity android:name=".SplashScreenActivity"
             android:screenOrientation="portrait"
+            android:noHistory="true"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             >
             <intent-filter>

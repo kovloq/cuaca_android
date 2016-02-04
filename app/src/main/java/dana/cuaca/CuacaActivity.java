@@ -1,6 +1,7 @@
 package dana.cuaca;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -11,6 +12,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -39,13 +42,23 @@ public class CuacaActivity  extends AppCompatActivity {
     ImageView imageView;
     TextView cuacaView;
     TextView tanggalView;
+    ImageView imageView2;
+    TextView cuacaView2;
+    TextView tanggalView2;
     TextView namaView;
+    private ProgressDialog progress;
+    private Button btnSubmit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cuaca);
+        //Show loading
+        progress=new ProgressDialog(this);
+        progress.setMessage("Loading");
+        progress.show();
         //Receive post data
+        btnSubmit=(Button)findViewById(R.id.setting);
         Bundle bundle= getIntent().getExtras();
         String propinsi=bundle.getString("propinsi");
         String kota=bundle.getString("kota");
@@ -66,6 +79,9 @@ public class CuacaActivity  extends AppCompatActivity {
                 String tanggal_res=response.body().getTanggal();
                 String cuaca_res=response.body().getCuaca();
                 String image_res=response.body().getImage();
+                String tanggal_res2=response.body().getTanggalBesok();
+                String cuaca_res2=response.body().getCuacaBesok();
+                String image_res2=response.body().getImageBesok();
                 cuacaView=(TextView) findViewById(R.id.cuaca);
                 tanggalView=(TextView) findViewById(R.id.tanggal);
                 namaView=(TextView) findViewById(R.id.nama);
@@ -73,14 +89,20 @@ public class CuacaActivity  extends AppCompatActivity {
                 cuacaView.setText(cuaca_res);
                 tanggalView.setText(tanggal_res);
                 namaView.setText(name_res);
-                Log.d("Name", name_res);
-                Log.d("Tanggal", tanggal_res);
-                Log.d("Cuaca", cuaca_res);
-                Log.d("Image", image_res);
+
+                cuacaView2=(TextView) findViewById(R.id.cuaca_besok);
+                tanggalView2=(TextView) findViewById(R.id.tanggal_besok);
+                imageView2=(ImageView) findViewById(R.id.image_cuaca_besok);
+                cuacaView2.setText(cuaca_res2);
+                tanggalView2.setText(tanggal_res2);
+
                 int resId = getResources().getIdentifier(image_res, "drawable", getPackageName());
                 imageView.setImageResource(resId);
-//
 
+                int resId2 = getResources().getIdentifier(image_res2, "drawable", getPackageName());
+                imageView2.setImageResource(resId2);
+                progress.hide();
+                progress.dismiss();
             }
 
             @Override
@@ -88,8 +110,17 @@ public class CuacaActivity  extends AppCompatActivity {
                 // something went completely wrong (like no internet connection)
                 Log.d("Error", t.getMessage());
             }
+
+
         });
 
+        btnSubmit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+                startActivity(new Intent(getApplicationContext(), MainActivity.class));
+            }
+        });
 
     }
 
@@ -106,10 +137,12 @@ public class CuacaActivity  extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.about:
+                finish();
                 startActivity(new Intent(this, AboutActivity.class));
                 return true;
 
             case R.id.setting:
+                finish();
                 startActivity(new Intent(this, MainActivity.class));
                 return true;
             default:

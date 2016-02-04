@@ -9,6 +9,9 @@ public class Cuaca {
     private String cuaca;
     private String image;
     private String tanggal;
+    private String cuaca_besok;
+    private String image_besok;
+    private String tanggal_besok;
 
     public void setId(String Id) {
         this.id = id;
@@ -49,5 +52,17 @@ public class Cuaca {
 
     public String getTanggal() {
         return tanggal;
+    }
+
+    public String getCuacaBesok() {
+        return cuaca_besok;
+    }
+
+    public String getImageBesok() {
+        return image_besok;
+    }
+
+    public String getTanggalBesok() {
+        return tanggal_besok;
     }
 }
